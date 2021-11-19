@@ -10,6 +10,7 @@
 
 - React Query (data fetching, caching)
 - React Table (dynamic sortable tables)
+- Web3React / Web3Modal
 
 ## Getting Started
 
