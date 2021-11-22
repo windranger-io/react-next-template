@@ -10,7 +10,10 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
     "date-fns": "^2.26.0",
+    "ethers": "^5.5.1",
     "next": "12.0.4",
     "postcss": "^8.3.11",
     "react": "17.0.2",

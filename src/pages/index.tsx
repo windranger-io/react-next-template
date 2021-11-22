@@ -2,6 +2,9 @@ import { Fragment, useRef, useState } from 'react'
 import { Disclosure, Dialog, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon, PaperClipIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
+import { useWeb3React } from '@web3-react/core'
+import { injected } from 'components/wallet/connectors'
+import { shortenAddress } from 'utils/strings'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -65,6 +68,11 @@ function classNames(...classes: string[]) {
 export default function Dashboard() {
   const [open, setOpen] = useState<boolean>(false)
   const cancelButtonRef = useRef(null)
+  const { activate, active, account, deactivate } = useWeb3React()
+
+  const connectWallet = async () => {
+    await activate(injected)
+  }
 
   return (
     <>
@@ -296,10 +304,11 @@ export default function Dashboard() {
                   </div>
                   <div className="hidden sm:ml-6 sm:flex sm:items-center">
                     <button
+                      onClick={active ? deactivate : connectWallet}
                       type="button"
                       className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
-                      Connect wallet
+                      {active ? shortenAddress(account) : 'Connect Wallet'}
                     </button>
                   </div>
                   <div className="-mr-2 flex items-center sm:hidden">
