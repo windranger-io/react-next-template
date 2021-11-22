@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useWeb3React } from '@web3-react/core'
 import { injected } from 'components/wallet/connectors'
 import { shortenAddress } from 'utils/strings'
+import logo from '../../public/logo.svg'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -278,9 +279,9 @@ export default function Dashboard() {
                     <div className="flex-shrink-0 flex items-center">
                       <Image
                         className="block lg:hidden h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
+                        src={logo}
                         alt="Workflow"
-                        width="40"
+                        width="60"
                         height="40"
                       />
                     </div>
@@ -350,10 +351,11 @@ export default function Dashboard() {
                 <div className="pt-4 pb-4 border-t border-gray-200">
                   <div className="flex items-center px-4">
                     <button
+                      onClick={active ? deactivate : connectWallet}
                       type="button"
                       className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                     >
-                      Connect wallet
+                      {active ? shortenAddress(account) : 'Connect Wallet'}
                     </button>
                   </div>
                 </div>
