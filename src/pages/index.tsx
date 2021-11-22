@@ -1,6 +1,11 @@
 import { Fragment, useRef, useState } from 'react'
 import { Disclosure, Dialog, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon, PaperClipIcon } from '@heroicons/react/outline'
+import {
+  MenuIcon,
+  XIcon,
+  PaperClipIcon,
+  CheckIcon,
+} from '@heroicons/react/outline'
 import Image from 'next/image'
 import { useWeb3React } from '@web3-react/core'
 import { injected } from 'components/wallet/connectors'
@@ -114,32 +119,16 @@ export default function Dashboard() {
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
               <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
-                {/* <div>
+                <div>
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
                     <CheckIcon
                       className="h-6 w-6 text-green-600"
                       aria-hidden="true"
                     />
                   </div>
-                  <div className="mt-3 text-center sm:mt-5">
-                    <Dialog.Title
-                      as="h3"
-                      className="text-lg leading-6 font-medium text-gray-900"
-                    >
-                      Payment successful
-                    </Dialog.Title>
-                    <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Eius aliquam laudantium explicabo pariatur iste
-                        dolorem animi vitae error totam. At sapiente aliquam
-                        accusamus facere veritatis.
-                      </p>
-                    </div>
-                  </div>
-                </div> */}
+                </div>
                 <div className="">
-                  <div className="px-4 py-4 sm:px-3">
+                  <div className="px-4 py-4 sm:px-0">
                     <h3 className="text-lg leading-6 font-medium text-gray-900">
                       Applicant Information
                     </h3>
@@ -147,7 +136,19 @@ export default function Dashboard() {
                       Personal details and application.
                     </p>
                   </div>
-                  <div className="border-t border-gray-200 px-4 py-5 sm:px-3">
+                  <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div className="w-full h-full bg-gray-200 absolute"></div>
+                    <div
+                      className="h-full bg-blue-500 absolute"
+                      style={{ width: '42%' }}
+                    ></div>
+                  </div>
+                  <div className={'py-4'}>
+                    <p className="mt-1 max-w-2xl text-md text-gray-500">
+                      9,000,000 left
+                    </p>
+                  </div>
+                  <div className="border-t border-gray-200 px-4 py-5 sm:px-0">
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                       <div className="sm:col-span-1">
                         <dt className="text-sm font-medium text-gray-500">
