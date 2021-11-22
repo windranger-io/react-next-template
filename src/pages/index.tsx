@@ -7,6 +7,7 @@ import {
   CheckIcon,
 } from '@heroicons/react/outline'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useWeb3React } from '@web3-react/core'
 import { injected } from 'components/wallet/connectors'
 import { shortenAddress } from 'utils/strings'
@@ -14,7 +15,6 @@ import logo from '../../public/logo.svg'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Screen', href: '#', current: false },
   { name: 'Screen', href: '#', current: false },
   { name: 'Screen', href: '#', current: false },
 ]
@@ -99,7 +99,7 @@ export default function Dashboard() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -129,7 +129,7 @@ export default function Dashboard() {
                 </div>
                 <div className="">
                   <div className="px-4 py-4 sm:px-0">
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">
+                    <h3 className="text-lg leading-6 font-medium text-gray-950">
                       Applicant Information
                     </h3>
                     <p className="mt-1 max-w-2xl text-sm text-gray-500">
@@ -139,7 +139,7 @@ export default function Dashboard() {
                   <div className="h-3 relative max-w-xl rounded-full overflow-hidden">
                     <div className="w-full h-full bg-gray-200 absolute"></div>
                     <div
-                      className="h-full bg-blue-500 absolute"
+                      className="h-full bg-pink-500 absolute"
                       style={{ width: '42%' }}
                     ></div>
                   </div>
@@ -154,7 +154,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           Full name
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           Margot Foster
                         </dd>
                       </div>
@@ -162,7 +162,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           Application for
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           Backend Developer
                         </dd>
                       </div>
@@ -170,7 +170,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           Email address
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           margotfoster@example.com
                         </dd>
                       </div>
@@ -178,7 +178,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           Compensation
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           $1,200,000
                         </dd>
                       </div>
@@ -186,7 +186,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           About
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           Fugiat ipsum ipsum deserunt culpa aute sint do nostrud
                           anim incididunt cillum culpa consequat. Excepteur qui
                           ipsum aliquip consequat sint. Sit id mollit nulla
@@ -199,7 +199,7 @@ export default function Dashboard() {
                         <dt className="text-sm font-medium text-gray-500">
                           Attachments
                         </dt>
-                        <dd className="mt-1 text-sm text-gray-900">
+                        <dd className="mt-1 text-sm text-gray-950">
                           <ul
                             role="list"
                             className="border border-gray-200 rounded-md divide-y divide-gray-200"
@@ -217,7 +217,7 @@ export default function Dashboard() {
                               <div className="ml-4 flex-shrink-0">
                                 <a
                                   href="#"
-                                  className="font-medium text-blue-600 hover:text-blue-500"
+                                  className="font-medium text-pink-600 hover:text-pink-500"
                                 >
                                   Download
                                 </a>
@@ -236,7 +236,7 @@ export default function Dashboard() {
                               <div className="ml-4 flex-shrink-0">
                                 <a
                                   href="#"
-                                  className="font-medium text-blue-600 hover:text-blue-500"
+                                  className="font-medium text-pink-600 hover:text-pink-500"
                                 >
                                   Download
                                 </a>
@@ -251,14 +251,14 @@ export default function Dashboard() {
                 <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
                   <button
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:col-start-2 sm:text-sm"
+                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-pink-600 text-base font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 sm:col-start-2 sm:text-sm"
                     onClick={() => setOpen(false)}
                   >
                     Accept
                   </button>
                   <button
                     type="button"
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:col-start-1 sm:text-sm"
+                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 sm:mt-0 sm:col-start-1 sm:text-sm"
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
@@ -271,13 +271,13 @@ export default function Dashboard() {
         </Dialog>
       </Transition.Root>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-white border-b border-gray-200">
+        <Disclosure as="nav" className="bg-white dark:bg-gray-950">
           {({ open }) => (
             <>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
-                  <div className="flex">
-                    <div className="flex-shrink-0 flex items-center">
+              <div className="mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-20">
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0">
                       <Image
                         className="block lg:hidden h-8 w-auto"
                         src={logo}
@@ -286,21 +286,24 @@ export default function Dashboard() {
                         height="40"
                       />
                     </div>
-                    <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+                    <div className="ml-10 flex items-baseline space-x-4">
                       {navigation.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? 'border-blue-500 text-gray-900'
-                              : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                            'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
-                          )}
                           aria-current={item.current ? 'page' : undefined}
+                          href={item.href}
                         >
-                          {item.name}
-                        </a>
+                          <a
+                            className={classNames(
+                              item.current
+                                ? 'bg-gray-200 text-grey-950 dark:bg-gray-750 dark:text-gray-100'
+                                : 'text-gray-400 hover:text-gray-600',
+                              'px-3 py-2 rounded-xl text-medium font-normal'
+                            )}
+                          >
+                            {item.name}
+                          </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -308,14 +311,14 @@ export default function Dashboard() {
                     <button
                       onClick={active ? deactivate : connectWallet}
                       type="button"
-                      className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="inline-flex items-center px-4 py-2 text-medium font-medium rounded-md text-pink-600 bg-pink-100 border-2 border-pink-100 hover:border-pink-400 focus:outline-none dark:bg-pink-900 dark:border-pink-900 dark:text-pink-300"
                     >
                       {active ? shortenAddress(account) : 'Connect Wallet'}
                     </button>
                   </div>
                   <div className="-mr-2 flex items-center sm:hidden">
                     {/* Mobile menu button */}
-                    <Disclosure.Button className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <Disclosure.Button className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -339,7 +342,7 @@ export default function Dashboard() {
                       href={item.href}
                       className={classNames(
                         item.current
-                          ? 'bg-blue-50 border-blue-500 text-blue-700'
+                          ? 'bg-pink-50 border-pink-500 text-pink-700'
                           : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800',
                         'block pl-3 pr-4 py-2 border-l-4 text-base font-medium'
                       )}
@@ -354,7 +357,7 @@ export default function Dashboard() {
                     <button
                       onClick={active ? deactivate : connectWallet}
                       type="button"
-                      className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="inline-flex items-center px-4 py-2 border-0 text-medium font-medium rounded-md text-pink-600 bg-pink-100 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
                     >
                       {active ? shortenAddress(account) : 'Connect Wallet'}
                     </button>
@@ -368,9 +371,9 @@ export default function Dashboard() {
         <div className="py-10">
           <header>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="text-3xl font-bold leading-tight text-gray-900">
-                Dashboard
-              </h1>
+              <p className="text-lg font-normal leading-tight text-gray-600 dark:text-gray-400">
+                Dashboard overview
+              </p>
             </div>
           </header>
           <main>
@@ -380,31 +383,31 @@ export default function Dashboard() {
                 <div className="flex flex-col">
                   <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                      <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <table className="min-w-full divide-y divide-gray-200">
-                          <thead className="bg-gray-50">
+                      <div className="bg-gray-50 overflow-hidden dark:bg-gray-950 sm:rounded-lg">
+                        <table className="min-w-full divide-y divide-gray-100 dark:divide-gray-800">
+                          <thead className="">
                             <tr>
                               <th
                                 scope="col"
-                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 text-left text-medium font-medium text-gray-500 dark:text-gray-200 tracking-wider"
                               >
                                 Name
                               </th>
                               <th
                                 scope="col"
-                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 text-left text-medium font-medium text-gray-500  dark:text-gray-200 tracking-wider"
                               >
                                 Title
                               </th>
                               <th
                                 scope="col"
-                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 text-left text-medium font-medium text-gray-500 dark:text-gray-200  tracking-wider"
                               >
                                 Status
                               </th>
                               <th
                                 scope="col"
-                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                className="px-6 py-3 text-left text-medium font-medium text-gray-500 dark:text-gray-200  tracking-wider"
                               >
                                 Role
                               </th>
@@ -413,7 +416,7 @@ export default function Dashboard() {
                               </th>
                             </tr>
                           </thead>
-                          <tbody className="bg-white divide-y divide-gray-200">
+                          <tbody className="bg-grey-50 divide-y divide-gray-100 dark:divide-gray-800">
                             {people.map((person) => (
                               <tr key={person.email}>
                                 <td className="px-6 py-4 whitespace-nowrap">
@@ -428,17 +431,17 @@ export default function Dashboard() {
                                       />
                                     </div>
                                     <div className="ml-4">
-                                      <div className="text-sm font-medium text-gray-900">
+                                      <div className="text-sm font-medium text-gray-950 dark:text-gray-200">
                                         {person.name}
                                       </div>
-                                      <div className="text-sm text-gray-500">
+                                      <div className="text-sm text-gray-500 dark:text-gray-500">
                                         {person.email}
                                       </div>
                                     </div>
                                   </div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                  <div className="text-sm text-gray-900">
+                                  <div className="text-sm text-gray-950 dark:text-gray-200">
                                     {person.title}
                                   </div>
                                   <div className="text-sm text-gray-500">
@@ -450,14 +453,14 @@ export default function Dashboard() {
                                     Active
                                   </span>
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ">
                                   {person.role}
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                   <a
                                     href="#"
                                     onClick={() => setOpen(true)}
-                                    className="text-blue-600 hover:text-blue-900"
+                                    className="text-pink-600 hover:text-pink-900"
                                   >
                                     Edit
                                   </a>
