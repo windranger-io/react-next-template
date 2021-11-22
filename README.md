@@ -1,3 +1,7 @@
+# Dashboard Starter React / Next
+
+Starter project built on React + Next for Web3 projects. More details and docs coming soon ...
+
 ## Stack
 
 - NextJS / React
