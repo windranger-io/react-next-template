@@ -9,8 +9,16 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="dark h-full font-sans">
+      <Html className="h-full font-sans">
         <Head />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches))
+        {document.documentElement.classList.add('dark')} else
+        {document.documentElement.classList.remove('dark')}`,
+          }}
+        ></script>
         <body className="h-full bg-gray-100 dark:bg-gray-850">
           <Main />
           <NextScript />
