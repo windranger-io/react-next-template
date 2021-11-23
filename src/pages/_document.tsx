@@ -13,10 +13,9 @@ class MyDocument extends Document {
         <Head />
         <script
           dangerouslySetInnerHTML={{
-            __html: `if (localStorage.darkMode === 'true' || (!('darkMode' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches))
-        {document.documentElement.classList.add('dark')} else
-        {document.documentElement.classList.remove('dark')}`,
+            __html: `if (localStorage.darkMode === 'true') {
+              document.documentElement.classList.add('dark')
+            }`,
           }}
         ></script>
         <body className="h-full bg-gray-100 dark:bg-gray-850">

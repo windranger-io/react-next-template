@@ -460,7 +460,7 @@ export default function Dashboard() {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ">
                                   {person.role}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-normal">
                                   <a
                                     href="#"
                                     onClick={() => setOpen(true)}
