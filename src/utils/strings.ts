@@ -6,3 +6,7 @@ export const shortenAddress = (address: string | null | undefined): string => {
     address.length
   )}`
 }
+
+export const classNames = (...classes: string[]): string => {
+  return classes.filter(Boolean).join(' ')
+}
