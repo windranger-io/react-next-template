@@ -25,5 +25,3 @@ const Web3Connect: React.FC<Web3ConnectProps> = ({ injected }): JSX.Element => {
 }
 
 export default Web3Connect
-
-// activate, active, account, deactivate
