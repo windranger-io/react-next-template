@@ -3,12 +3,11 @@ import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useWeb3React } from '@web3-react/core'
 import { injected } from 'web3/connectors'
-import { shortenAddress } from 'utils/strings'
 import logo from '../../public/logo.svg'
 import { Switcher } from 'components/ThemeSwitcher'
 import { classNames } from 'utils/strings'
+import Web3Connect from 'components/Web3Connect'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -21,12 +20,6 @@ interface StackedProps {
 }
 
 const Stacked: React.FC<StackedProps> = ({ children }) => {
-  const { activate, active, account, deactivate } = useWeb3React()
-
-  const connectWallet = async () => {
-    await activate(injected)
-  }
-
   return (
     <>
       <div className="min-h-full">
@@ -83,13 +76,7 @@ const Stacked: React.FC<StackedProps> = ({ children }) => {
 
                   <div className="hidden sm:ml-6 sm:flex sm:items-center">
                     <Switcher />
-                    <button
-                      onClick={active ? deactivate : connectWallet}
-                      type="button"
-                      className="inline-flex items-center px-4 py-2 text-medium font-medium rounded-md text-pink-600 bg-pink-100 border-2 border-pink-100 hover:border-pink-400 focus:outline-none dark:bg-pink-900 dark:border-pink-900 dark:text-pink-300 dark:bg-opacity-50 dark:border-opacity-50 dark:hover:border-opacity-80"
-                    >
-                      {active ? shortenAddress(account) : 'Connect Wallet'}
-                    </button>
+                    <Web3Connect injected={injected} />
                   </div>
                   {/* */}
                 </div>
@@ -116,13 +103,7 @@ const Stacked: React.FC<StackedProps> = ({ children }) => {
                 </div>
                 <div className="pt-4 pb-4 border-t border-gray-200">
                   <div className="flex items-center px-4">
-                    <button
-                      onClick={active ? deactivate : connectWallet}
-                      type="button"
-                      className="inline-flex items-center px-4 py-2 text-medium font-medium rounded-md text-pink-600 bg-pink-100 border-2 border-pink-100 hover:border-pink-400 focus:outline-none dark:bg-pink-900 dark:border-pink-900 dark:text-pink-300 dark:bg-opacity-50 dark:border-opacity-50 dark:hover:border-opacity-80"
-                    >
-                      {active ? shortenAddress(account) : 'Connect Wallet'}
-                    </button>
+                    <Web3Connect injected={injected} />
                   </div>
                 </div>
               </Disclosure.Panel>
