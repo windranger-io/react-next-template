@@ -1,9 +1,5 @@
 name: Build
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - 'main'
+on: [pull_request, push]
 jobs:
   build-appl:
     runs-on: ubuntu-18.04
