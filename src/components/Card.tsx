@@ -11,6 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children }): JSX.Element => {
   return (
     <div className="bg-gray-50 overflow-hidden dark:bg-gray-950 sm:rounded-lg">
+      <p className="hidden">simple test sample!</p>
       {children}
     </div>
   )
