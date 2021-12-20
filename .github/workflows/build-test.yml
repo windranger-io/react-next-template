@@ -1,5 +1,5 @@
 name: Build & Test
-on: [pull_request]
+on: [pull_request, push]
 jobs:
   build-app:
     runs-on: ubuntu-18.04
@@ -21,5 +21,8 @@ jobs:
           key: ${{ runner.os }}-yarn-2-${{ hashFiles('**/package.json') }}
 
       - run: yarn install --frozen-lockfile
+      - run:
+          name: Check code formatting and linting
+          command: yarn lint && yarn prettier
       - run: yarn build
       - run: yarn test
