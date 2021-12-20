@@ -1,5 +1,5 @@
-name: Build
-on: [pull_request, push]
+name: Build & Test
+on: [pull_request]
 jobs:
   build-app:
     runs-on: ubuntu-18.04
@@ -22,3 +22,4 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
+      - run: yarn test
