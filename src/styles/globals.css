@@ -4,6 +4,10 @@
 /*
   APPLY STYLES  
 */
+#__next {
+  @apply w-full h-full;
+}
+
 @tailwind utilities;
 
 html,
