@@ -28,4 +28,3 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn lint && yarn prettier --check "src/**/*.(ts|tsx|js)"
       - run: yarn build
-      - run: yarn test

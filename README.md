@@ -1,20 +1,14 @@
 # Dashboard Starter React / Next
 
-Starter project built on React + Next for Web3 projects. More details and docs coming soon ...
+Starter project built on React + Next for landing pages and Web3 projects.
 
 ## Stack
 
 - NextJS / React
 - TypeScript
-- Tailwind CSS
+- Chakra UI
 - Eslint
 - Prettier
-
-### Dependencies
-
-- React Query (data fetching, caching)
-- React Table (dynamic sortable tables)
-- Web3React / Web3Modal
 
 ## Getting Started
 
