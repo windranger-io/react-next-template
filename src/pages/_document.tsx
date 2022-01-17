@@ -1,4 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { chakra } from '@chakra-ui/react'
+
+const ChakraHtml = chakra(Html)
+const Body = chakra('body')
 
 class MyDocument extends Document {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -9,20 +13,13 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="h-full font-sans">
+      <ChakraHtml>
         <Head />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `if (localStorage.darkMode === 'true') {
-              document.documentElement.classList.add('dark')
-            }`,
-          }}
-        ></script>
-        <body className="h-full bg-gray-100 dark:bg-gray-850">
+        <Body>
           <Main />
           <NextScript />
-        </body>
-      </Html>
+        </Body>
+      </ChakraHtml>
     )
   }
 }

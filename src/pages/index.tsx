@@ -1,8 +1,11 @@
+import { Flex } from '@chakra-ui/react'
+import Header from 'components/Header'
+
 const Home = () => {
   return (
-    <div className="flex flex-1 h-full items-center justify-center">
-      <p>Something is happening...</p>
-    </div>
+    <Flex direction="column">
+      <Header />
+    </Flex>
   )
 }
 
