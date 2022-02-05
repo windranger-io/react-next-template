@@ -5381,10 +5381,10 @@ react-merge-refs@^1.1.0:
   resolved "https://registry.yarnpkg.com/react-merge-refs/-/react-merge-refs-1.1.0.tgz#73d88b892c6c68cbb7a66e0800faa374f4c38b06"
   integrity sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ==
 
-react-query@3.34.12:
-  version "3.34.12"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.34.12.tgz#dcaaf7b629f0868aae8afef9fb7692f6ea7643bf"
-  integrity sha512-flDdudQVH4CqE+kNYYYyo4g2Yjek3H/36G3b9bK5oe26jD5gFnx+PPwnq0gayq5z2dcSfr2z4+drvuyeZ3A5QQ==
+react-query@3.34.13:
+  version "3.34.13"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.34.13.tgz#6804767e2e00c780f29fc5cbf923e48bb5cb7f83"
+  integrity sha512-fGEzTLgXy2SGsLZbNY6qUk6IT3MYbWADRY+nyZoDJdCuplt1r/MqZO1I6RsvKG0qAuYfg/l9Er/Ce39xrb4epw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
