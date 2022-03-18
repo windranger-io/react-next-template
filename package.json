@@ -20,7 +20,7 @@
     "react-query": "3.34.16"
   },
   "devDependencies": {
-    "@babel/core": "7.17.7",
+    "@babel/core": "7.17.8",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@testing-library/jest-dom": "5.16.1",
