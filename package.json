@@ -14,7 +14,7 @@
     "@emotion/react": "11.8.2",
     "@emotion/styled": "11.8.1",
     "framer-motion": "5.6.0",
-    "next": "12.1.0",
+    "next": "12.1.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "3.34.17"
@@ -35,7 +35,7 @@
     "autoprefixer": "10.4.3",
     "babel-jest": "27.5.1",
     "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
+    "eslint-config-next": "12.1.4",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-testing-library": "5.1.0",
