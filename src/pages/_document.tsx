@@ -1,8 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { chakra } from '@chakra-ui/react'
-
-const ChakraHtml = chakra(Html)
-const Body = chakra('body')
 
 class MyDocument extends Document {
   /* eslint-disable  @typescript-eslint/no-explicit-any */
@@ -13,13 +9,13 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <ChakraHtml>
+      <Html>
         <Head />
-        <Body>
+        <body>
           <Main />
           <NextScript />
-        </Body>
-      </ChakraHtml>
+        </body>
+      </Html>
     )
   }
 }

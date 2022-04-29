@@ -1,15 +1,13 @@
-import { Flex } from '@chakra-ui/react'
+import tw from 'twin.macro'
 
 interface HelloWorldProps {
   foo?: string
 }
 
+const FlexContainer = tw.div`flex h-32 bg-gray-100 justify-center items-center`
+
 const HelloWorld: React.FC<HelloWorldProps> = ({}): JSX.Element => {
-  return (
-    <Flex h={100} bg="gray.100" justifyContent="center" alignItems="center">
-      <Flex>Hey 👋</Flex>
-    </Flex>
-  )
+  return <FlexContainer>Hey 👋</FlexContainer>
 }
 
 export default HelloWorld
