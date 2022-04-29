@@ -15,7 +15,7 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "5.6.0",
-    "next": "12.1.4",
+    "next": "12.1.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "3.34.20"
@@ -38,7 +38,7 @@
     "babel-jest": "27.5.1",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "8.13.0",
-    "eslint-config-next": "12.1.4",
+    "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-testing-library": "5.2.1",
