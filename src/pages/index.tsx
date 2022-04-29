@@ -1,11 +1,13 @@
-import { Flex } from '@chakra-ui/react'
+import tw from 'twin.macro'
 import Header from 'components/Header'
+
+const FlexContainer = tw.div`flex  flex-col`
 
 const Home = () => {
   return (
-    <Flex direction="column">
+    <FlexContainer>
       <Header />
-    </Flex>
+    </FlexContainer>
   )
 }
 

@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app'
-import { ChakraProvider, GlobalStyle } from '@chakra-ui/react'
-import { theme } from 'theme'
 import Head from 'next/head'
 import Script from 'next/script'
+import 'tailwindcss/tailwind.css'
+import { GlobalStyles } from 'twin.macro'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -57,10 +57,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', '[GTM_CODE]');
         `}
       </Script>
-      <ChakraProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ChakraProvider>
+
+      <GlobalStyles />
+      <Component {...pageProps} />
     </>
   )
 }
