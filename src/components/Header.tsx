@@ -1,12 +1,10 @@
-import tw from 'twin.macro'
+import { FlexContainer } from './styles'
 
 interface HelloWorldProps {
   foo?: string
 }
 
-const FlexContainer = tw.div`flex h-32 bg-gray-100 justify-center items-center`
-
-const HelloWorld: React.FC<HelloWorldProps> = ({}): JSX.Element => {
+const HelloWorld = ({}: HelloWorldProps) => {
   return <FlexContainer>Hey 👋</FlexContainer>
 }
 
