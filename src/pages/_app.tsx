@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=[GTM_CODE]"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM_CODE}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '[GTM_CODE]');
+          gtag('config', '${process.env.NEXT_PUBLIC_GTM_CODE}');
         `}
       </Script>
 

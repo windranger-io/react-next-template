@@ -6,11 +6,15 @@ Starter project built on React + Next for landing pages and Web3 projects.
 
 - NextJS / React
 - TypeScript
-- Chakra UI
 - Eslint
 - Prettier
 
 ## Getting Started
+
+Setup a new project using this template, you will be asked to input a folder name of your choice.
+```bash
+npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template
+```
 
 First, run the development server:
 
