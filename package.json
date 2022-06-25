@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
-    "@commitlint/cli": "15.0.0",
-    "@commitlint/config-conventional": "15.0.0",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
     "@emotion/babel-plugin": "^11.9.2",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "12.1.5",
