@@ -2,7 +2,7 @@
 
 Starter project built on React + Next for landing pages and Web3 projects.
 
-## Stack
+## General Stack
 
 - NextJS / React
 - TypeScript
@@ -11,12 +11,21 @@ Starter project built on React + Next for landing pages and Web3 projects.
 
 ## Getting Started
 
-Setup a new project using this template, you will be asked to input a folder name of your choice.
+Setup a new project using the template of your choice, you will be asked to input a folder name.
+
+**Setup a normal site/landing page (without web3)**
+
 ```bash
 npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template
 ```
 
-First, run the development server:
+**Setup a Dapp site (ethers.js, wagmi ...)**
+
+```bash
+npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template/tree/dapp
+```
+
+### Run the development server:
 
 ```bash
 npm run dev

@@ -3,6 +3,11 @@ import Head from 'next/head'
 import Script from 'next/script'
 import 'tailwindcss/tailwind.css'
 import { GlobalStyles } from 'twin.macro'
+import '@rainbow-me/rainbowkit/styles.css'
+import { myCustomTheme } from 'theme/rainbowTheme'
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import { WagmiConfig } from 'wagmi'
+import { wagmiClient, chains } from 'utils/connectors'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -59,7 +64,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
 
       <GlobalStyles />
-      <Component {...pageProps} />
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains} theme={myCustomTheme}>
+          <Component {...pageProps} />
+        </RainbowKitProvider>
+      </WagmiConfig>
     </>
   )
 }
