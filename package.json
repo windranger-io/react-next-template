@@ -21,7 +21,7 @@
     "react-query": "3.38.1"
   },
   "devDependencies": {
-    "@babel/core": "7.17.10",
+    "@babel/core": "7.18.13",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@emotion/babel-plugin": "^11.9.2",
