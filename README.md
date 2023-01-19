@@ -12,6 +12,8 @@ Starter project built on React + Next for landing pages and Web3 projects.
 
 ## Getting Started
 
+Click `Use this template` in the gihub UI or you can use the cli as below:
+
 ```bash
 npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template
 ```
