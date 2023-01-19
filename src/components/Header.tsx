@@ -1,11 +1,11 @@
-import { FlexContainer } from './styles'
-
-interface HelloWorldProps {
+interface HeaderProps {
   foo?: string
 }
 
-const HelloWorld = ({}: HelloWorldProps) => {
-  return <FlexContainer>Hey 👋</FlexContainer>
+export default function Header({}: HeaderProps) {
+  return (
+    <div className="flex h-32 bg-gray-100 justify-center items-center">
+      Hey 👋
+    </div>
+  )
 }
-
-export default HelloWorld

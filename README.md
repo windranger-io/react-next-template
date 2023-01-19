@@ -4,31 +4,18 @@ Starter project built on React + Next for landing pages and Web3 projects.
 
 ## General Stack
 
-- NextJS / React
+- NextJS 13 / React
 - TypeScript
+- Conventional commits
 - Eslint
 - Prettier
 
 ## Getting Started
 
-Setup a new project using the template of your choice, you will be asked to input a folder name.
-
-**Setup a normal site/landing page (without web3)**
+Click `Use this template` in the gihub UI or you can use the cli as below:
 
 ```bash
 npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template
-```
-
-**Setup a Tailwind site (pure tailwind without twin.macro ...)**
-
-```bash
-npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template/tree/tailwind
-```
-
-**Setup a Dapp site (ethers.js, wagmi ...)**
-
-```bash
-npx create-next-app@latest --ts --example https://github.com/windranger-io/react-next-template/tree/dapp
 ```
 
 ### Run the development server:
